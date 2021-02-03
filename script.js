@@ -58,7 +58,7 @@ random.on('click',function(){
 
 $("body").append(random);
 var playbutton = $("<button>");
-var player = $("<audio controls>")
+var player = $("<audio autoplay>")
 var sources = $('<source>')
 playbutton.on('click',function(){
    
@@ -86,4 +86,3 @@ $("body").append(playbutton)
 
 
 
-Apples witing 
