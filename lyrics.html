@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <input id="title" /> by <input id="artist" />
+      <button onclick="findLyrics()">Search for lyrics</button>
+      <div id="output"></div>
+    </div>
+    <script>
+      function findLyrics() {
+        $.get(
+          "https://api.lyrics.ovh/v1/" +
+            document.getElementById("artist").value +
+            "/" +
+            document.getElementById("title").value,
+          function (data) {
+            document.getElementById("output").innerHTML = data.lyrics.replace(
+              new RegExp("\n", "g"),
+              "<br>"
+            );
+          }
+        );
+      }
+    </script>
+
+    <h2>Hello</h2>
+    <script src="lyrics.js"></script>
+  </body>
+</html>
