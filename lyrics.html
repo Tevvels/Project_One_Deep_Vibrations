@@ -9,27 +9,15 @@
   <body>
     <div class="container">
       <input id="title" /> by <input id="artist" />
-      <button onclick="findLyrics()">Search for lyrics</button>
+      <button id="search">Search for lyrics</button>
+
+      <p id="by">Last Song By:</p>
+      <p id="song">Last Song:</p>
+
       <div id="output"></div>
     </div>
-    <script>
-      function findLyrics() {
-        $.get(
-          "https://api.lyrics.ovh/v1/" +
-            document.getElementById("artist").value +
-            "/" +
-            document.getElementById("title").value,
-          function (data) {
-            document.getElementById("output").innerHTML = data.lyrics.replace(
-              new RegExp("\n", "g"),
-              "<br>"
-            );
-          }
-        );
-      }
-    </script>
 
-    <h2>Hello</h2>
     <script src="lyrics.js"></script>
   </body>
 </html>
+ß
