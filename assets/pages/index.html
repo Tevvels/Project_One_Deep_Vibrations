@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- this is the div  that is needed for the deezer api  -->
+    <div id="dz-root"></div>
+    <!-- this id is where the player generates the width at 100% and the align center, sets it in the midde of the page -->
+<div id="player" style="width:100%;" align="center"></div>
+    <!-- this is the play button where the magic happens with deezer  -->
+    <input type="button" onclick="DZ.player.playSmartRadio(3); return false;" value="Play Radio"/>
+    <!-- this container holds the lyrics -->
+    <div class="container">
+        <!-- this is the button tht looks it up the lyrics.  -->
+        <button id="button">Search for lyrics</button>
+        <!-- this is where the lyrics display  -->
+        <div id="output"></div>
+      </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
+
+
