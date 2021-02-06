@@ -4,6 +4,9 @@
   height: 1240px;
   font-size: large;
 }
+.leftside a {
+  color: #000000;
+}
 
 .circular--portrait {
   position: relative;
