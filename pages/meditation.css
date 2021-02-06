@@ -4,6 +4,9 @@
   height: 1240px;
   font-size: large;
 }
+.leftside a {
+  color: #000000;
+}
 
 .circular--portrait {
   position: relative;
@@ -306,77 +309,6 @@
 }
 
 #Pop:hover .overlay {
-  opacity: 1;
-  margin-top: 15px;
-  margin: 10px;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: hsla(0, 3%, 6%, 0.582);
-}
-#EDM:hover .overlay {
-  opacity: 1;
-  margin-top: 15px;
-  margin: 10px;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: hsla(0, 3%, 6%, 0.582);
-}
-
-#Countrymusic:hover .overlay {
-  opacity: 1;
-  margin-top: 15px;
-  margin: 10px;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: hsla(0, 3%, 6%, 0.582);
-}
-
-#punkrock:hover .overlay {
-  opacity: 1;
-  margin-top: 15px;
-  margin: 20px;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: hsla(0, 3%, 6%, 0.582);
-}
-
-#Gospelmusic:hover .overlay {
   opacity: 1;
   margin-top: 15px;
   margin: 10px;

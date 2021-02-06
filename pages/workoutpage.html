@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet" />
     <title> workout</title>
 </head>
@@ -18,28 +18,43 @@
 
             <div class="col s2  leftside">
                 <div class="circular--portrait">
+                     <a href="../deepVibrations.html">
+                    <img src="../deepVibrationsLogo.jpg"/>
+                    </a>
                     <img src="../assets/images/deepVibrationsLogo.jpg"/>
                 </div>
                 
                 <div class="divider"></div>
                 
+                <div class="section">      
+                    <a href="google.com">
+                        <span> <i class="fa fa-music" aria-hidden="true"></i> </span> Top tracks
+                    </a>              
+                    
                 <div class="section">                    
                     <span> <i class="fa fa-music" aria-hidden="true"></i> </span> Top tracks
                 
                     <div class="section">
+                        <a href="https://music.youtube.com/">
                         <span> <i class="fa fa-users" aria-hidden="true"></i> </span> Featured Artist
-                       
+                        </a>
                        </div>
                 </div>
 
                 <div class="divider"></div>
-                <div class="section">
+                   <div class="section">
+                        <a href="#">
                     <span> <i class="fa fa-history" aria-hidden="true"></i> </span> History
+                        </a>
                     <div class="section">
+                        <a href="#">
                         <span><i class="fa fa-cog" aria-hidden="true"></i> </span> Settings
+                        </a>
                     </div>
                     <div class="section">
-                       <span> <i class="fa fa-usd" aria-hidden="true"></i> </span> Donate                   
+                         <a href="#">
+                       <span> <i class="fa fa-usd" aria-hidden="true"></i> </span> Donate 
+                    </a>
                     </div>
                 </div>
 
@@ -47,13 +62,16 @@
                 <div class="divider"></div>
 
                 <div class="section">
+                    <a href="#">
                     <span> <i class="fa fa-plus" aria-hidden="true"></i> </span> Playlist
+                    </a>
                               
                 
                 </div>
 
 
 
+            </div>
             </div>
             <div class="col s10" style=" height: 1240px;   background-color: hsla(0, 3%, 6%, 0.582);">
                 <nav>
@@ -68,9 +86,12 @@
                    
 
                     <div>
-                        <div class="row">
-                            <div class="col s12 m6 l2 card sticky-action" id="hipCard">
+                        <div class="row ">
+                            <div class="col s12 m12 l5 card sticky-action " id="hipCard">
                                 <div class="card-image waves-effect waves-block waves-light">
+                                <div class="overlay card-image">
+                                    <div div class="desc card-content">Hip-Hop</div>
+                                </div></button>
                                     <a href="./playerPage.html">
                                         <img src="../assets/images/hip2.jpg" alt="hip-hop" id=hiphopimg/>
                                         <div class="overlay card-image">
@@ -80,8 +101,12 @@
                                 </div>
                             </div>
 
-                            <div class="col s12 m6 l2 card sticky-action" id="Rap">
+                            <div class="col s12 m12 l5 card sticky-action " id="Rap">
                                 <div class="card-image waves-effect waves-block waves-light">
+
+                                    <a href="../">
+                                <img src="../workout.jpg" alt="Rap" id=workoutimg></img>
+                                
                                 <button onclick="myFunction()"></button><img src="../assets/images/hip1.jpg" alt="Rap" id=workoutimg></img>
                                 <div class="overlay card-image">
                                     <div div class="desc card-content">Rap</div>
@@ -91,47 +116,24 @@
                                 
                             </div>
 
-                            <div class="col s12 m6 l2 card sticky-action" id="Rock">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                <button onclick="myFunction()"></button><img src="../assets/images/rock music.jpg" alt="Rock" id=rockmusicimg></img>
-                                <div class="overlay card-image">
-                                    <div div class="desc card-content">Rock</div>
-                                </div></button>
-                                </div>
-                            </div>
-
-                            <div class="col s12 m6 l2 card sticky-action"id="Pop">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <button onclick="myFunction()"></button><img src="../assets/images/popmusic.jpg" alt="Pop" id=Popmusicimg></img>
-                                    <div class="overlay card-image">
-                                        <div div class="desc card-content">Pop</div>
-                                    </div></button>
-                                    </div>
-                            </div>
-                            <div class="col s12 m6 l2 card sticky-action  " id="EDM">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                <button onclick="myFunction()"></button><img src="../assets/images/EDM.jpg" alt="EDM" id=EDMimg></img>
-                                <div class="overlay card-image">
-                                    <div div class="desc card-content">Pop</div>
-                                </div></button>
-                                </div>
                             
-                            </div>
+
+                            
                         </div>
 
                              <!-- 2ndrow -->
                             <div class="row">
-                                <div class="col s12 m6 l3 card sticky-action  " id="Countrymusic">
+                                <div class="col s12 m6 l5 card sticky-action  " id="Countrymusic">
                                     <div class="card-image waves-effect waves-block waves-light">
                                         <button onclick="myFunction()"></button><img src="../assets/images/Country music.jpg" alt="Country music" id=Countryimg></img>
                                         <div class="overlay card-image">
-                                            <div div class="desc card-content">Countrymusic</div>
+                                            <div div class="desc card-content">Country music</div>
                                         </div></button>
                                         </div>
                                     
                                 </div>
 
-                                <div class="col s12 m6 l4 card sticky-action"id="punkrock">
+                                <div class="col s12 m6 l5 card sticky-action"id="punkrock">
                                     <div class="card-image waves-effect waves-block waves-light">
                                     <button onclick="myFunction()"></button><img src="../assets/images/Punk rock.jpg" alt="punk rock" id=punkrockimg></img>
                                     <div class="overlay card-image">
@@ -140,71 +142,13 @@
                                     </div>
                                 </div>
 
-                                <div class="col s12 m6 l3 card sticky-action "id="Gospelmusic">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                    <button onclick="myFunction()"></button><img src="../assets/images/Gospel music.jpg" alt="Gospel music" id=Gospelmusic></img>
-                                    <div class="overlay card-image">
-                                        <div div class="desc card-content">Gospel music</div>
-                                    </div></button>
-                                    </div>
-                                    
-                                </div>
+                                 
 
                                 
                             </div>
 
                                  <!-- 3rdrow -->
-                            <div class="row">
-                                <div class="col s12 m6 l2 card sticky-action"id="HeavyMetal">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <button onclick="myFunction()"></button><img src="../assets/images/Heavy metal.jpg" alt="HeavyMetal" id=HeavyMetalimg></img>
-                                    <div class="overlay card-image">
-                                        <div div class="desc card-content">Heavy Metal</div>
-                                    </div></button>
-                                    </div>
-                                    
-                                    
-                                    
-                                
-
-                                    
-                                </div>
-                                <div class="col s12 m6 l2 card sticky-action"id="Reggae">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <button onclick="myFunction()"></button><img src="../assets/images/reggae.jpg" alt="Reggae" id=Reggaeimg></img>
-                                        <div class="overlay card-image">
-                                            <div div class="desc card-content">Reggae</div>
-                                        </div></button>
-                                        </div>
-                                    
-                                </div>
-                                <div class="col s12 m6 l2 card sticky-action"id="Funk">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <button onclick="myFunction()"></button><img src="../assets/images/Funk.jpg" alt="Funk music" id=Funkimg></img>
-                                        <div class="overlay card-image">
-                                            <div div class="desc card-content">Funk</div>
-                                        </div></button>
-                                        </div>
-                                   
-                                </div>
-                                <div class="col s12 m6 l2 card sticky-action"id="K-pop">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                    <button onclick="myFunction()"></button><img src="../assets/images/K-pop.jpg" alt=" K-pop" id=k-popimg></img>
-                                    <div class="overlay card-image">
-                                        <div div class="desc card-content">K-pop</div>
-                                    </div></button>
-                                    </div>
-                                </div>
-
-                                <div class="col s12 m6 l2 card sticky-action" id="trap">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <button onclick="myFunction()"></button><img src="../assets/images/trap.jpg" alt=" Trap" id=Trapimg></img>
-                                        <div class="overlay card-image">
-                                            <div div class="desc card-content">Trap</div>
-                                        </div></button>
-                                        </div>
-                                </div>
-                            </div>
+                            
                         </div>
 
                     </div>
@@ -217,5 +161,6 @@
   
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="workoutpage.js"></script>
 </body>
 </html>
