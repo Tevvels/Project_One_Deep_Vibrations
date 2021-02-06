@@ -61,7 +61,7 @@
     <!-- this is the play button where the magic happens with deezer  -->
     <input
       type="button" class="button"
-      onclick="DZ.player.playSmartRadio(3); return false;"
+      onclick="DZ.player.playSmartRadio(3);event.stopPropagation(); return false;"
       value="Play Radio"
     />
 
