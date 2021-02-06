@@ -89,8 +89,6 @@
 
 #topRow:hover .overlay {
   opacity: 1;
-  margin-top: 15px;
-  margin: 10px;
 }
 .overlay {
   position: absolute;
@@ -119,4 +117,7 @@
   background-origin: padding-box;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
+}
+.row a {
+  color: white;
 }
