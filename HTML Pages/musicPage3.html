@@ -65,6 +65,8 @@
       value="Play Radio"
     />
 
+    <button id="save-track-btn">Save Track</button>            
+
     <!-- this container holds the lyrics -->
     <div class="container">
       <!-- this is the button tht looks it up the lyrics.  -->
@@ -73,6 +75,19 @@
       <div id="output"></div>
     </div>
     <script>
+
+      var trackTitle = "";
+      var artistName = "";
+
+        $("#save-track-btn").on("click", function() {
+          var favorites = JSON.parse(localStorage.getItem("favorite")) || []
+          favorites.push({
+            title: trackTitle,
+            artist: artistName
+          })
+          localStorage.setItem("favorite", JSON.stringify(favorites))
+        })
+
         document.addEventListener("DOMContentLoaded", function () {
           // running the DZ init
           DZ.init({
@@ -93,7 +108,13 @@
           DZ.Event.subscribe("current_track", function (arg) {
             // call the event_listener_append function adding multiple arguments
             // findLyrics('current_track', arg.index, arg.track.title, arg.track.album.title);
+            console.log(arg)
+            trackTitle = arg.track.title.toLowerCase(),
+            artistName = arg.track.artist.name.toLowerCase() 
+            console.log("trackTitle", artistName)
+            
             $("#button").on("click", function () {
+              
               console.log(
                 arg.track.title.toLowerCase(),
                 arg.track.artist.name.toLowerCase()
@@ -141,6 +162,8 @@
             </div>
         </div>
 
+
+        
   
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

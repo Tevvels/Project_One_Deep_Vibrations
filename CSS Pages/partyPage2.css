@@ -68,8 +68,6 @@
 
 #bottomRow:hover .overlay {
   opacity: 1;
-  margin-top: 15px;
-  margin: 10px;
 }
 .overlay {
   position: absolute;
@@ -89,8 +87,6 @@
 
 #topRow:hover .overlay {
   opacity: 1;
-  margin-top: 15px;
-  margin: 10px;
 }
 .overlay {
   position: absolute;
