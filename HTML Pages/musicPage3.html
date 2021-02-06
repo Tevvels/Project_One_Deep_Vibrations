@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS Pages/mainpage2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet" />
+    <title>DeepVibrations</title>
+</head>
+<body>
+    
+        <div class="row">
+
+            <div class="col s2  leftside">
+                <div class="circular--portrait">
+                    <img src="../deepVibrationsLogo.jpg"/>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="section">                    
+                    <span> <i class="fa fa-music" aria-hidden="true"></i>  </span>  Home
+                    <div class="section">
+                    <span> <i class="fa fa-history" aria-hidden="true"></i> </span> History
+                
+                
+                </div>
+
+                
+                  
+                </div>
+
+
+             
+
+               
+
+
+
+            </div>
+            <div class="col s10" style=" height: 1240px;   background-color: hsla(0, 3%, 6%, 0.582);">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo"><i class="material-icons">DeepVibrations</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="sass.html"><i class="material-icons"></i></a></li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+                   <!-- this is the div  that is needed for the deezer api  -->
+    <div id="dz-root"></div>
+    <!-- this id is where the player generates the width at 100% and the align center, sets it in the midde of the page -->
+    <div id="player" style="width: 100%" align="center"></div>
+    <!-- this is the play button where the magic happens with deezer  -->
+    <input
+      type="button" class="button"
+      onclick="DZ.player.playSmartRadio(3); return false;"
+      value="Play Radio"
+    />
+
+    <!-- this container holds the lyrics -->
+    <div class="container">
+      <!-- this is the button tht looks it up the lyrics.  -->
+      <button id="button" class="button">Search for lyrics</button>
+      <!-- this is where the lyrics display  -->
+      <div id="output"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // running the DZ init
+          DZ.init({
+            appId: "8",
+            channelUrl: "https://developers.deezer.com/examples/channel.php",
+            player: {
+              container: "player",
+              playlist: true,
+              width: 400,
+              height: 400,
+              format: "square",
+              onload: playerLoaded,
+            },
+          });
+        });
+  
+        function playerLoaded() {
+          DZ.Event.subscribe("current_track", function (arg) {
+            // call the event_listener_append function adding multiple arguments
+            // findLyrics('current_track', arg.index, arg.track.title, arg.track.album.title);
+            $("#button").on("click", function () {
+              console.log(
+                arg.track.title.toLowerCase(),
+                arg.track.artist.name.toLowerCase()
+              );
+              findLyrics(
+                arg.track.title.toLowerCase(),
+                arg.track.artist.name.toLowerCase()
+              );
+            });
+          });
+        }
+        var findLyrics = function (b, a) {
+          // get is a short hand function of ajax.
+          console.log(a, b);
+          $.get(
+            // sending a get request to api.lyrics.ovh
+            "https://api.lyrics.ovh/v1/" +
+              //with the value of the artist input
+              a +
+              // plus the value of the title input
+              "/" +
+              b,
+            // .get callback function takes the data we receive
+            function (data) {
+              console.log(data);
+              // and displays results int he element that has an id output
+              document.getElementById("output").textContent = data.lyrics.replace(
+                // this function replaces '/n' with g
+                new RegExp("\n", "g"),
+                // and then inserts a break element
+                "<br>"
+              );
+            }
+          );
+        };
+        var iframe = document.getElementById("myFrame");
+      </script>
+
+                    
+
+                    </div>
+               
+
+
+            </div>
+        </div>
+
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
