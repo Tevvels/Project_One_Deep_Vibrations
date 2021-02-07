@@ -1,0 +1,18 @@
+p {
+  font-size: medium;
+  font-weight: 300;
+}
+
+.song {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.leftside {
+  background-color: hsla(0, 2%, 48%, 0.404);
+  color: rgb(0, 0, 0);
+  height: 1240px;
+  font-size: large;
+}
+.h6 {
+  padding-left: 60px;
+}
