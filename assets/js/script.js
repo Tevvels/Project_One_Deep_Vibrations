@@ -130,3 +130,15 @@ function savedTrack(){
     var dataTitle = $(this).attr("data-title");
 })
 };
+
+  var trackTitle = "";
+      var artistName = "";
+
+        $("#save-track-btn").on("click", function() {
+          var favorites = JSON.parse(localStorage.getItem("favorite")) || []
+          favorites.push({
+            title: trackTitle,
+            artist: artistName
+          })
+          localStorage.setItem("favorite", JSON.stringify(favorites))
+        })
