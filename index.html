@@ -4,115 +4,91 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS Pages/mainpage2.css" />
+    <link rel="stylesheet" href="./assets/css/mainpage2.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet" />
     <title>DeepVibrations</title>
 </head>
 <body>
-    
-        <div class="row">
-
-            <div class="col s2  leftside">
-                <div class="circular--portrait">
+    <main class="row">
+        <aside class="col s2  leftside">
+            <article class="circular--portrait">
+                <a href="./index.html">
                     <img src="assets/images/deepVibrationsLogo.jpg"/>
-                </div>
-                
-                <div class="divider"></div>
-                
-                <div class="section">                    
-                    <span> <i class="fa fa-music" aria-hidden="true"></i>  </span>  Home
-                    <div class="section">
-                        <a
-                        href="HTML Pages/history.html">
-                    <span> <i class="fa fa-history" aria-hidden="true"></i> </span> History
-                
-                        </a>
-                </div>
-    
-                </div>
-
-            </div>
-            <div class="col s10" style=" height: 1240px;   background-color: hsla(0, 3%, 6%, 0.582);">
-                <nav>
-                    <div class="nav-wrapper">
-                        <a href="#!" class="brand-logo"><i class="material-icons">DeepVibrations</i></a>
-                        <ul class="right hide-on-med-and-down">
-                            <li><a href="sass.html"><i class="material-icons"></i></a></li>
-                            
-                        </ul>
-                    </div>
+                </a>
+            </article>
+            <section class="divider"></section>
+            <article class="section">
+                <a href="./index.html" >                 
+                <span> <i class="fa fa-music" aria-hidden="true"></i></span>  Home
+                </a>
+            </article>
+            <article class="section">
+                <a href="./HTML_Pages/history.html">
+                    <span> <i class="fa fa-history" aria-hidden="true"></i></span> History
+                </a>
+            </article>
+        </aside>
+        <section class="col s10" style=" height: 1240px;   background-color: hsla(0, 3%, 6%, 0.582);">
+            <nav>
+                <nav class="nav-wrapper">
+                    <a href="./index.html" class="brand-logo">
+                        <i class="material-icons">DeepVibrations</i>
+                    </a>
                 </nav>
-                   
-
-                    <div>
-                        <div class="row">
-                          
-                            <div class="col s8 m6 l5 card sticky-action" id="topRow">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                <button onclick="myFunction()"></button>
-                                <a href="../HTML Pages/workoutPage.html">
+            </nav>
+            <section>
+                <section class="row">    
+                    <section class="col s8 m6 l5 card sticky-action" id="topRow">
+                        <article class="card-image waves-effect waves-block waves-light">
+                            <button onclick="myFunction()"></button>
+                            <a href="./HTML_Pages/workoutpage.html">
                                 <img src="./assets/images/workout.jpg" alt="Man working out">
-                                </a>
-                                <div class="overlay card-image">
-                                    <div class="desc card-content">Workout!</div>
-                                </div></button>
-                                </div>
-                            
-                                
-                            </div>
-                            <div class="col s8 m6 l5 card sticky-action" id="topRow">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                <button onclick="myFunction()"></button>
-                                <a href="./HTML Pages/partyPage2.html">
-                                <img src="./assets/images/party.jpg" alt="Dancing in the club"></img> 
-                                </a>
-                                <div class="overlay card-image">
-                                    <div div class="desc card-content">Party!</div>
-                                </div></button>
-                                </div>
-                            
-                                
-                            </div>
-
-                            <div class="col s8 m6 l5 card sticky-action" id="bottomRow">
-                                <a href="./HTML Pages/meditation.html">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                <button onclick="myFunction()"></button><img src="./assets/images/Meditating.jpg" alt="Woman meditating" id=rockmusicimg></img>
-                                <div class="overlay card-image">
-                                    <div div class="desc card-content">Meditation</div>
-                                </div></button>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col s8 m6 l5 card sticky-action" id="bottomRow">
-                                <a href="./HTML Pages/romancePage.html">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                <button onclick="myFunction()"></button><img src="./assets/images/romance.jpg" alt="Couple kissing" id=rockmusicimg></img>
-                                <div class="overlay card-image">
-                                    <div div class="desc card-content">Romance</div>
-                                </div></button>
-                                </div>
-                            </div>
                             </a>
+                        <div class="overlay card-image">
+                            <h3 class="desc card-content">Workout!</h3>
                         </div>
-
-                           
-                         
-                        </div>
-
-                    </div>
-               
-
-
-            </div>
-        </div>
-
-  
-
+                        </article> 
+                    </section>
+                    <section class="col s8 m6 l5 card sticky-action" id="topRow">
+                        <a href="./HTML_Pages/partyPage2.html">
+                        <article class="card-image waves-effect waves-block waves-light">
+                            <button onclick="myFunction()"></button>
+                                <img src="./assets/images/party.jpg" alt="Dancing in the club"/>
+                            <div class="overlay card-image">
+                                <h3 class="desc card-content">Party!</h3>
+                            </div>
+                        </article>
+                        </a>
+                    </section>
+                    <section class="col s8 m6 l5 card sticky-action" id="bottomRow">
+                        <a href="./HTML_Pages/meditation.html">
+                        <article class="card-image waves-effect waves-block waves-light">
+                            <button onclick="myFunction()"></button>
+                            <img src="./assets/images/Meditating.jpg" alt="Woman meditating" id=rockmusicimg />
+                            <div class="overlay card-image">
+                                <h3 class="desc card-content">Meditation</h3>
+                            </div>
+                        </article>
+                        </a>
+                    </section>
+                    <section class="col s8 m6 l5 card sticky-action" id="bottomRow">
+                        <a href="./HTML_Pages/romancePage.html">
+                        <article class="card-image waves-effect waves-block waves-light">
+                            <button onclick="myFunction()"></button>
+                            <img src="./assets/images/romance.jpg" alt="Couple kissing" id=rockmusicimg/>
+                            <div class="overlay card-image">
+                                <h3 class="desc card-content">Romance</h3>
+                            </div>
+                        </article>
+                        </a>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
