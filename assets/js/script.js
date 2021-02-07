@@ -114,3 +114,19 @@ var iframe = document.getElementById("myFrame");
 
 
   
+var favorites = JSON.parse(localStorage.getItem("favorite")) || [];
+
+var html = "";
+function savedTrack(){
+    for (var i = 0; i < favorites.length; i++) {
+    html += `<p>${favorites[i].title} <span>${favorites[i].artist}</span></p>
+        <button data-title="${favorites[i].title}"> Get Song </button>`;
+    $("#previous-search").html(html);
+    }
+
+    $("#previous-search").html(html);
+
+    $("#data-title").on("click", function () {
+    var dataTitle = $(this).attr("data-title");
+})
+};
