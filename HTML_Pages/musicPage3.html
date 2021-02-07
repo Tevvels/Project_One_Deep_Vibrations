@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/mainpage2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet" />
+    <title>DeepVibrations</title>
+</head>
+<body>
+  <main class="row">
+    <aside class="col s2  leftside">
+        <div class="circular--portrait">
+          <img src="../assets/images/deepVibrationsLogo.jpg" alt="Deep Vibrations Logo">
+        </div>
+        <div class="divider"></div>
+        <section class="section">
+          <a href="../index.html">                  
+            <span> 
+              <i class="fa fa-music" aria-hidden="true"></i> 
+            </span>
+              Home
+          </a>
+        <article class="section">
+          <a href="./history.html">
+          <span> 
+              <i class="fa fa-history" aria-hidden="true"></i>
+            </span> History
+          </a>
+          </article>
+        </section>
+    </aside>
+    <section class="col s10" style=" height: 1240px;   background-color: hsla(0, 3%, 6%, 0.582);">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">
+                  <i class="material-icons">DeepVibrations</i></a>
+            </div>
+        </nav>
+            <!-- this is the div  that is needed for the deezer api  -->
+        <div id="dz-root"></div>
+            <!-- this id is where the player generates the width at 100% and the align center, sets it in the midde of the page -->
+        <div id="player" style="width: 100%" align="center"></div>
+            <!-- this is the play button where the magic happens with deezer  -->
+        <article class="button-container">
+            <input type="button" class="button" onclick="DZ.player.playSmartRadio(3);event.stopPropagation();return false;"value="Play Radio"/>
+            <button id="save-track-btn" class="button">Save Track</button>
+            <button id="button" class="button">Search for lyrics</button>
+        </article>
+        <div id="output"></div>
+      </section>
+  </main>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>
