@@ -308,7 +308,7 @@
   background-color: hsla(0, 3%, 6%, 0.582);
 }
 
-#Pop:hover .overlay {
+.Countrymusicp:hover .overlay {
   opacity: 1;
   margin-top: 15px;
   margin: 10px;
