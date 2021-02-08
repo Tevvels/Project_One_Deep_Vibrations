@@ -1,11 +1,11 @@
-
-
-
+var iframe = document.getElementById("myFrame");
+var favorites = JSON.parse(localStorage.getItem("favorite")) || [];
+var html = "";
+var songs = [];
+var lyricList = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     // running the DZ init 
-
-
     DZ.init({
         appId  : '8',
         channelUrl : 'https://developers.deezer.com/examples/channel.php',
@@ -21,39 +21,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-function playerLoaded(){
-   
+function playerLoaded(){   
     DZ.Event.subscribe('current_track', function(arg){
-
-  
-        
-        // call the event_listener_append function adding multiple arguments 
-        // findLyrics('current_track', arg.index, arg.track.title, arg.track.album.title);
-
+        trackTitle = (arg.track.title).toLowerCase();
+        artistName = (arg.track.artist.name).toLowerCase();
+        console.log(arg);
         
              $("#button").on("click",function(){
 
                 event.stopPropagation()
                 event.stopImmediatePropagation()
                 event.preventDefault();
+                
         console.log((arg.track.title).toLowerCase(),(arg.track.artist.name).toLowerCase());
+
         findLyrics((arg.track.title).toLowerCase(),(arg.track.artist.name).toLowerCase());
-      
-  
-    })
 
-
-      
+        })  
     });
-
-     
-
-
-
 }
-var songs = [];
-var lyricList = [];
+
+
+
+
 var findLyrics = function(b,a) {
     // get is a short hand function of ajax.
 
@@ -110,23 +100,53 @@ var findLyrics = function(b,a) {
 
         
   }
-var iframe = document.getElementById("myFrame");
 
 
-  
-var favorites = JSON.parse(localStorage.getItem("favorite")) || [];
 
-var html = "";
+
 function savedTrack(){
     for (var i = 0; i < favorites.length; i++) {
     html += `<p>${favorites[i].title} <span>${favorites[i].artist}</span></p>
         <button data-title="${favorites[i].title}"> Get Song </button>`;
-    $("#previous-search").html(html);
     }
 
     $("#previous-search").html(html);
 
-    $("#data-title").on("click", function () {
-    var dataTitle = $(this).attr("data-title");
-})
+
+
+
 };
+
+
+
+
+
+
+var trackTitle = "";
+var artistName = "";
+
+  $("#save-track-btn").on("click", function() {
+    var favorites = JSON.parse(localStorage.getItem("favorite")) || []
+    favorites.push({
+      title: trackTitle,
+      artist: artistName
+    })
+    localStorage.setItem("favorite", JSON.stringify(favorites))
+  })
+savedTrack();
+
+
+var favorites = JSON.parse(localStorage.getItem("favorite")) || [];
+
+var html = "";
+for (var i = 0; i < favorites.length; i++) {
+  html += `<div style="background-color: #F5F5F5;" class ="song" > <h5  >${favorites[i].title}</h5> <div>${favorites[i].artist}</div>
+      <button data-title="${favorites[i].title}"> Get Song </button></div>`;
+  $("#previous-search").html(html);
+}
+
+$("#previous-search").html(html);
+
+$("#data-title").on("click", function () {
+  var dataTitle = $(this).attr("data-title");
+});
