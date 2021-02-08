@@ -5,10 +5,13 @@ https://tevvels.github.io/Project_One_Deep_Vibrations/index.html
 
 # Project Description
 
-![Screenshot of Deep Vibrations page 1] (assets/images/one.png)
-![Screenshot of Deep Vibrations page 2] (assets/images/two.png)
-![Screenshot of Deep Vibrations page 3] (assets/images/three.png)
-![Screenshot of Deep Vibrations page 4] (assets/images/four.png)
+![Screenshot of Deep Vibrations page 1](assets/images/one.png)
+
+![Screenshot of Deep Vibrations page 2](assets/images/two.png)
+
+![Screenshot of Deep Vibrations page 3](assets/images/three.png)
+
+![Screenshot of Deep Vibrations page 4](assets/images/four.png)
 
 Music lovers can never have too much music access. In this app, the user chooses a mood or activity (ex. romance or workout) by clicking on a button. The user will then be brought to a new page to pick a popular genre relating to what mood they chose on the previous page. Once the user clicks the genre button, they will be brought to the third page.
 
