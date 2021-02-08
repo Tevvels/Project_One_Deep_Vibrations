@@ -122,7 +122,6 @@ function savedTrack(){
 
 
 
-
 var trackTitle = "";
 var artistName = "";
 
@@ -135,3 +134,19 @@ var artistName = "";
     localStorage.setItem("favorite", JSON.stringify(favorites))
   })
 savedTrack();
+
+
+var favorites = JSON.parse(localStorage.getItem("favorite")) || [];
+
+var html = "";
+for (var i = 0; i < favorites.length; i++) {
+  html += `<div style="background-color: #F5F5F5;" class ="song" > <h5  >${favorites[i].title}</h5> <div>${favorites[i].artist}</div>
+      <button data-title="${favorites[i].title}"> Get Song </button></div>`;
+  $("#previous-search").html(html);
+}
+
+$("#previous-search").html(html);
+
+$("#data-title").on("click", function () {
+  var dataTitle = $(this).attr("data-title");
+});
