@@ -23,9 +23,3 @@ https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search
 Lyrics.ovh is an API powered through Apiary and Oracle that allows users to search for lyrics of songs.
 
 For styling and better UI/UX, materialize and bootstrap frameworks were used. HTML, CSS, and Javascript/JQuery were all used to build this application.
-
-This app was created by github users:
-DanteJames94
-Tevvels
-NeamenD
-mfranl
